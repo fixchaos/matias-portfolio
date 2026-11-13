@@ -1,0 +1,144 @@
+
+/* Importar Design Tokens */
+@import './variables.css';
+
+/* ========================================
+   CSS RESET
+======================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ========================================
+   DOCUMENT
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--navbar-height);
+}
+
+body {
+  min-width: 320px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================
+   TYPOGRAPHY
+======================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  font-weight: var(--font-bold);
+  line-height: 1.2;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+code,
+pre {
+  font-family: var(--font-monospace);
+}
+
+/* ========================================
+   LINKS
+======================================== */
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+/* ========================================
+   IMAGES
+======================================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================================
+   TEXT SELECTION
+======================================== */
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+/* ========================================
+   LAYOUT UTILITIES
+======================================== */
+
+.container {
+  width: min(100% - 2rem, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-20);
+}
+
+
+/* ========================================
+   DESIGN SYSTEM TEST
+======================================== */
+
+.text-accent {
+  color: var(--color-primary);
+  font-family: var(--font-monospace);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  letter-spacing: 2px;
+}
+
+.btn-primary {
+  margin-top: var(--space-6);
+  padding: var(--space-3) var(--space-6);
+
+  background-color: var(--color-primary);
+  color: var(--bg-primary);
+
+  border-radius: var(--radius-md);
+
+  font-weight: var(--font-semibold);
+
+  transition: background-color var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
