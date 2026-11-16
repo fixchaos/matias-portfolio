@@ -1,0 +1,135 @@
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+
+  background-color: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(16px);
+
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* ========================================
+   NAVBAR CONTAINER
+======================================== */
+
+.navbar-container {
+  position: relative;
+
+  width: min(100% - 2rem, var(--container-width));
+  min-height: var(--navbar-height);
+
+  margin-inline: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.navbar-logo {
+  color: var(--text-primary);
+
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+
+  letter-spacing: -1px;
+}
+
+.navbar-logo span {
+  color: var(--color-primary);
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.navbar-link {
+  position: relative;
+
+  color: var(--text-secondary);
+
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+
+  transition: color var(--transition-fast);
+}
+
+.navbar-link:hover {
+  color: var(--color-primary);
+}
+
+/* ========================================
+   MOBILE TOGGLE
+======================================== */
+
+.navbar-toggle {
+  display: none;
+
+  background: transparent;
+  color: var(--text-primary);
+
+  padding: var(--space-2);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 768px) {
+
+  .navbar-nav {
+    position: absolute;
+
+    top: var(--navbar-height);
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    gap: var(--space-6);
+
+    padding: var(--space-8);
+
+    background-color: var(--bg-secondary);
+
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .navbar-nav.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-link:focus-visible,
+  .navbar-logo:focus-visible,
+  .navbar-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+  }
+
+}
