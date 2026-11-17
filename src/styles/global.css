@@ -125,6 +125,10 @@ img {
   letter-spacing: 2px;
 }
 
+.text-blue {
+  color: var(--color-primary);
+}
+
 .btn-primary {
   margin-top: var(--space-6);
   padding: var(--space-3) var(--space-6);

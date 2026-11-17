@@ -40,10 +40,10 @@ function Hero() {
             </a>
           </div>
 
-          <div className="hero-scroll">
-            <ArrowDown size={16} />
+          <a href="#about" className="hero-scroll">
             <span>Desliza para explorar</span>
-          </div>
+            <ArrowDown size={18} />
+          </a>
 
         </div>
 
